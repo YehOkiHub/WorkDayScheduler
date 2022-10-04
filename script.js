@@ -4,8 +4,8 @@ var timeBlocks = $(".time-block");
 
 
 $(".saveBtn").on("click", function(){
-
-    var text = $(".description").val();
+    
+    var text = $(this).siblings(".description").val();
      
     localStorage.setItem("text", text);
     
@@ -13,11 +13,8 @@ $(".saveBtn").on("click", function(){
 
 
 timeBlocks.each(function(i) {
-    // console.log(this);
     let parsedTime = parseInt($(this).attr('id').split('hour')[1]);
-    // console.log(parsedTime)
-    // console.log(currentTime)
-    console.log(this)
+     
 
         if (parsedTime < currentTime ) {
           $(this).css("background-color", "red");
