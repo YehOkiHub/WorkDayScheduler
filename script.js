@@ -13,10 +13,13 @@ $(".saveBtn").on("click", function(){
 
 
 $(".time-block").each(function(i) {
-        if (this < currentTime ) {
+    console.log(this);
+    let parsedTime = parseInt(this.id)
+    // console.log(parsedTime)
+        if (parsedTime < currentTime ) {
           $(".description").css("background-color", "red");
         } 
-        else if (this === currentTime) {
+        else if (parsedTime === currentTime) {
             $(".description").css("background-color", "grey");
 
         }else {
