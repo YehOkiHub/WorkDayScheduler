@@ -17,4 +17,4 @@ JAVASCRIPT
 JQUERY
 
 
-![Picture](/readmepicture/wrokday.png "Read Me")
+![ScreenShot](/readmepicture/wrokday.png)
