@@ -12,17 +12,19 @@ $(".saveBtn").on("click", function(){
     });
 
 
-$(".time-block").each(function(i) {
-    console.log(this);
-    let parsedTime = parseInt(this.id)
-    // console.log(parsedTime)
+timeBlocks.each(function(i) {
+    // console.log(this);
+    let parsedTime = parseInt($(this).attr('id').split('hour')[1]);
+    console.log(parsedTime)
+    console.log(currentTime)
+
         if (parsedTime < currentTime ) {
           $(".description").css("background-color", "red");
-        } 
-        else if (parsedTime === currentTime) {
+
+        }else if (parsedTime === currentTime) {
             $(".description").css("background-color", "grey");
 
-        }else {
+        }else if (parsedTime > currentTime){
             $(".description").css("background-color", "green");
         }
     });
