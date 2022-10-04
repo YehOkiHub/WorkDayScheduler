@@ -15,24 +15,22 @@ $(".saveBtn").on("click", function(){
 timeBlocks.each(function(i) {
     // console.log(this);
     let parsedTime = parseInt($(this).attr('id').split('hour')[1]);
-    console.log(parsedTime)
-    console.log(currentTime)
+    // console.log(parsedTime)
+    // console.log(currentTime)
+    console.log(this)
 
         if (parsedTime < currentTime ) {
-          $(".description").css("background-color", "red");
+          $(this).css("background-color", "red");
 
         }else if (parsedTime === currentTime) {
-            $(".description").css("background-color", "grey");
+            $(this).css("background-color", "grey");
 
         }else if (parsedTime > currentTime){
-            $(".description").css("background-color", "green");
+            $(this).css("background-color", "green");
         }
     });
 
-
    
-
-
 
 
 
